@@ -14,7 +14,7 @@ from json import dumps
 #ajout ligne 16 et 17 
 
 def home(request):
-    return HttpResponse("Bienvenue sur la page d’accueil 🎉")
+    return HttpResponse("Bienvenue sur la page d accueil de la brasserie")
 
 class DepartementDetailView(DetailView):
     model = Departement

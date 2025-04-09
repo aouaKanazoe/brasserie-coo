@@ -11,6 +11,11 @@ from json import dumps
 
 # Create your views here.
 
+#ajout ligne 16 et 17 
+
+def home(request):
+    return HttpResponse("Bienvenue sur la page d’accueil 🎉")
+
 class DepartementDetailView(DetailView):
     model = Departement
     def render_to_response(self, context, **response_kwargs):

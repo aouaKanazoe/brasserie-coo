@@ -16,7 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from high_level.views import home # un des derniers changements
 
 urlpatterns = [
     path("admin/", admin.site.urls),
+    path("",home),# Cela gère la racine; 
+    # les ajouts dans ce fichiers sont à la ligne 22 et 23
 ]

@@ -22,7 +22,7 @@ FetchContent_Declare(
 FetchContent_MakeAvailable(cpr)
 
 # Créer l'exécutable
-add_executable(low_level low_level.cpp)
+add_executable(low_level  main.cpp)
 
 # Lier CPR à ton programme
 target_link_libraries(low_level PRIVATE cpr::cpr)

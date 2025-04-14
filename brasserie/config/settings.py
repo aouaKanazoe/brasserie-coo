@@ -76,8 +76,9 @@ TIME_ZONE = "UTC"
 USE_I18N = True
 USE_TZ = True
 
-# ✅ Static files configuration
+# Static files configuration
 STATIC_URL = "/static/"
+
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),  # pour tes fichiers persos
 ]

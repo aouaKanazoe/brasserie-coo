@@ -1,18 +1,7 @@
-cmake_minimum_required(VERSION 3.14)
+cmake_minimum_required(VERSION 3.20)
+project(low_level)
 
-set(PROJECT_NAME "low_level")
-project(${PROJECT_NAME})
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-option(CPR_ENABLE_SSL "" OFF)
-
-include(FetchContent)
-FetchContent_Declare(json
-    DOWNLOAD_EXTRACT_TIMESTAMP ON
-    URL "https://github.com/nlohmann/json/releases/download/v3.11.2/json.tar.xz")
-FetchContent_Declare(cpr
-    DOWNLOAD_EXTRACT_TIMESTAMP ON
-    URL "https://github.com/libcpr/cpr/archive/refs/tags/1.10.4.tar.gz")
-FetchContent_MakeAvailable(json cpr)
-
-add_executable(${PROJECT_NAME} ${PROJECT_NAME}.cpp)
-target_link_libraries(${PROJECT_NAME} nlohmann_json::nlohmann_json cpr::cpr)
+add_executable(low_level low_level.cpp)

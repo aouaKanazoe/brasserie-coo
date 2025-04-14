@@ -18,8 +18,15 @@ from django.contrib import admin
 from django.urls import path
 from brewsim.high_level.views import DepartementDetailView
 
+#  Ajouts pour gérer les fichiers statiques
+from django.conf import settings
+from django.conf.urls.static import static
+
 urlpatterns = [
     path("admin/", admin.site.urls),
 
     path("departement/<int:pk>",DepartementDetailView.as_view(),name='departement-detail'),
 ]
+
+# Ajout en fin de fichier : gérer les fichiers statiques
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
